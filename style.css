@@ -144,3 +144,39 @@ footer {
     margin-top: 20px;
     color: #f0f0f0;
 }
+
+.profile-pic-container {
+    margin: 50px auto; /* Centraliza horizontalmente */
+    padding: 50px auto; /* Centraliza horizontalmente */
+    width: 350px; /* Ajuste o tamanho conforme necessário */
+    height: 350px;
+    overflow: hidden;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: subtleMovement 6s ease-in-out infinite; /* Define a nova animação */
+}
+
+@keyframes subtleMovement {
+    0% {
+        transform: translate(0, 0); /* Posição inicial */
+    }
+    20% {
+        transform: translate(2px, -2px); /* Pequena variação em x e y */
+    }
+    40% {
+        transform: translate(-2px, 3px); /* Pequena variação inversa */
+    }
+    60% {
+        transform: translate(3px, -1px); /* Outra variação suave */
+    }
+    80% {
+        transform: translate(-1px, 2px); /* Movimento contrário */
+    }
+    100% {
+        transform: translate(0, 0); /* Volta para a posição inicial */
+    }
+}

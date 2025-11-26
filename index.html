@@ -1,116 +1,167 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - João Vitor Sgobin</title>
+    <title>João Vitor Sgobin — Desenvolvedor</title>
+
+    <!-- Fonte profissional -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header class="animated-header">
-        <nav>
-            <ul>
-                <li><a href="#hero">Início</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="container header-inner">
+            <div class="brand">
+                <span class="brand-name">João Vitor Sgobin</span>
+                <span class="brand-role">Desenvolvedor</span>
+            </div>
+
+            <nav class="nav">
+                <a href="#hero">Início</a>
+                <a href="#about">Sobre</a>
+                <a href="#skills">Habilidades</a>
+                <a href="#projects">Projetos</a>
+                <a href="#contact">Contato</a>
+            </nav>
+
+            <button class="theme-toggle" aria-label="Alternar tema">
+                <span class="icon-sun">☀️</span>
+                <span class="icon-moon">🌙</span>
+            </button>
+        </div>
     </header>
 
-    <div class="background-animation">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-    </div>
+    <main>
+        <!-- HERO -->
+        <section id="hero" class="hero container reveal">
+            <div class="hero-left">
+                <p class="hero-kicker">Desenvolvedor Full Stack</p>
+                <h1 class="hero-title">
+                    Construindo soluções<br>
+                    <span>simples, modernas e eficientes.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Trabalho com desenvolvimento web, APIs, integrações e automação,
+                    sempre focado em entregar valor real para pessoas e negócios.
+                </p>
 
-    <section id="hero" class="fade-in">
-        <div class="hero-content">
-            <h1>Olá, Eu Sou <span class="highlight">João Vitor Sgobin</span></h1>
-            <div class="profile-pic-container bounce">
-                <img src="sua_foto.png" alt="Foto de João Vitor Sgobin" class="profile-pic">
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-primary">Ver projetos</a>
+                    <a href="#contact" class="btn-ghost">Entrar em contato</a>
+                </div>
             </div>
-            <p>Desenvolvedor apaixonado por criar soluções inovadoras.</p>
-            <a href="#projects" class="cta-btn pulse">Veja Meus Projetos</a>
-        </div>
-    </section>
 
-    <section id="about" class="slide-in-left">
-        <h2>Sobre Mim</h2>
-        <p>Sou estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia e programação. Além disso, sou baterista e acredito que a criatividade é essencial tanto na música quanto no desenvolvimento de software.</p>
-    </section>
+            <div class="hero-right">
+                <div class="profile-wrapper">
+                    <div class="profile-ring"></div>
+                    <img src="sua_foto.png" alt="Foto de João Vitor Sgobin" class="profile-photo">
+                </div>
+            </div>
+        </section>
 
-    <section id="skills" class="zoom-in">
-        <h2>Habilidades</h2>
-        <div class="skills-grid">
-            <div class="skill-card hover-scale">
-                <h3>JavaScript</h3>
-                <p>Desenvolvimento de aplicações dinâmicas e interativas.</p>
-            </div>
-            <div class="skill-card hover-scale">
-                <h3>PHP</h3>
-                <p>Criação de sistemas backend robustos e eficientes.</p>
-            </div>
-            <div class="skill-card hover-scale">
-                <h3>HTML & CSS</h3>
-                <p>Construção de interfaces modernas e responsivas.</p>
-            </div>
-            <div class="skill-card hover-scale">
-                <h3>Git</h3>
-                <p>Controle de versão e colaboração em projetos.</p>
-            </div>
-            <div class="skill-card hover-scale">
-                <h3>Análise de Dados com Pandas</h3>
-                <p>Manipulação e análise de dados utilizando Python e Pandas.</p>
-            </div>
-            <div class="skill-card hover-scale">
-                <h3>Java com SpringBoot</h3>
-                <p>Desenvolvimento de APIs e aplicações robustas com SpringBoot.</p>
-            </div>
-            <div class="skill-card hover-scale">
-                <h3>Inglês</h3>
-                <p>Nível Intermediário/Avançado - Comunicação eficaz em ambientes profissionais.</p>
-            </div>
-        </div>
-    </section>
+        <!-- SOBRE -->
+        <section id="about" class="section container reveal">
+            <h2 class="section-title">Sobre mim</h2>
+            <p class="section-text">
+                Sou estudante de Análise e Desenvolvimento de Sistemas, focado em desenvolvimento web e soluções
+                conectadas.
+                Tenho experiência com JavaScript, Java com Spring Boot, Firebase, Python e projetos de IoT.
+                Gosto de transformar ideias em produtos funcionais, bem estruturados e com uma boa experiência de uso.
+            </p>
+        </section>
 
-    <section id="projects" class="fade-in-up">
-        <h2>Meus Projetos</h2>
-        <div class="projects-gallery">
-            <div class="project-card hover-glow">
-                <h3>ValCounter</h3>
-                <p>Chatbot para Twitch com overlay para Valorant.</p>
-                <a href="https://github.com/ssgobin/" target="_blank">Ver no GitHub</a>
-            </div>
-            <div class="project-card hover-glow">
-                <h3>Amigos de Viagem</h3>
-                <p>App para compartilhar rotas com amigos.</p>
-                <a href="https://github.com/ssgobin/" target="_blank">Ver no GitHub</a>
-            </div>
-            <div class="project-card hover-glow">
-                <h3>Varal Automático</h3>
-                <p>Varal inteligente integrado ao Telegram.</p>
-                <a href="https://github.com/ssgobin" target="_blank">Ver no GitHub</a>
-            </div>
-        </div>
-    </section>
+        <!-- HABILIDADES -->
+        <section id="skills" class="section container reveal">
+            <h2 class="section-title">Habilidades</h2>
+            <div class="grid">
+                <article class="card">
+                    <h3>Front-end</h3>
+                    <p>HTML, CSS, JavaScript, React e interfaces responsivas focadas em UX.</p>
+                </article>
 
-    <section id="contact" class="slide-in-right">
-        <h2>Contato</h2>
-        <p>Entre em contato comigo pelo e-mail:</p>
-        <a href="mailto:ssgobin.dev@gmail.com" class="contact-link">ssgobin.dev@gmail.com</a>
-    </section>
+                <article class="card">
+                    <h3>Back-end</h3>
+                    <p>Java com Spring Boot, PHP e APIs REST bem estruturadas.</p>
+                </article>
 
-    <footer class="fade-in">
-        <p>© 2025 João Vitor Sgobin. Desenvolvido com ❤️ e café.</p>
-        <div class="social-links">
-            <a href="https://github.com/ssgobin" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/joaovitorsgobin" target="_blank">LinkedIn</a>
+                <article class="card">
+                    <h3>Banco & Cloud</h3>
+                    <p>Firebase, Firestore, autenticação, storage e integrações em nuvem.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Automação & IoT</h3>
+                    <p>Projetos com ESP32/ESP8266, sensores, bots e integração com APIs.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Análise de Dados</h3>
+                    <p>Python, Pandas e manipulação de dados para insights rápidos.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Colaboração</h3>
+                    <p>Git, GitHub, organização de projetos e comunicação com time/cliente.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- PROJETOS -->
+        <section id="projects" class="section container reveal">
+            <h2 class="section-title">Projetos em destaque</h2>
+            <div class="grid projects-grid">
+                <article class="card project-card">
+                    <h3>ValCounter</h3>
+                    <p>Bot para Twitch com overlay para Valorant, focado em estatísticas de partidas e interação em
+                        tempo real.</p>
+                    <a href="https://github.com/ssgobin" target="_blank" class="btn-link">Ver no GitHub →</a>
+                </article>
+
+                <article class="card project-card">
+                    <h3>ACIANexus</h3>
+                    <p>Plataforma completa desenvolvida para a ACIA, integrando dashboards, cadastros, automações e
+                        gestão interna.</p>
+                    <a href="https://github.com/ssgobin" target="_blank" class="btn-link">Ver no GitHub →</a>
+                </article>
+
+
+                <article class="card project-card">
+                    <h3>Varal Automático</h3>
+                    <p>Projeto IoT com controle via Telegram, sensores e automação para o dia a dia.</p>
+                    <a href="https://github.com/ssgobin" target="_blank" class="btn-link">Ver no GitHub →</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contact" class="section container reveal">
+            <h2 class="section-title">Contato</h2>
+            <p class="section-text">
+                Aberto para oportunidades, parcerias e novos projetos.
+            </p>
+            <a href="mailto:ssgobin.dev@gmail.com" class="contact-email">ssgobin.dev@gmail.com</a>
+
+            <div class="contact-links">
+                <a href="https://github.com/ssgobin" target="_blank">GitHub</a>
+                <span>•</span>
+                <a href="https://linkedin.com/in/joaovitorsgobin" target="_blank">LinkedIn</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>© 2025 João Vitor Sgobin.</p>
+            <p class="footer-note">Desenvolvido com atenção aos detalhes.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>

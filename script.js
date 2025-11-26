@@ -1,53 +1,52 @@
-// Smooth scroll for navigation
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+// Smooth scroll para links de navegação
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+        const targetId = link.getAttribute('href');
+        if (!targetId || targetId === '#') return;
+
+        const target = document.querySelector(targetId);
+        if (!target) return;
+
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
         });
     });
 });
 
-// Smooth scroll for "Veja Meus Projetos" button
-document.querySelector('.cta-btn').addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector('#projects').scrollIntoView({
-        behavior: 'smooth',
-        block: 'center'
-    });
-});
+// Theme toggle (claro/escuro) com localStorage
+const toggleBtn = document.querySelector('.theme-toggle');
+const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+const savedTheme = localStorage.getItem('theme');
 
-// Typing effect for hero section
-const heroTitle = document.querySelector('#hero h1');
-const text = heroTitle.textContent;
-heroTitle.textContent = '';
-let index = 0;
-
-function typeEffect() {
-    if (index < text.length) {
-        heroTitle.textContent += text.charAt(index);
-        index++;
-        setTimeout(typeEffect, 100);
-    }
+if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    document.body.classList.add('dark');
 }
 
-typeEffect();
-
-// Scroll animations for sections
-const sections = document.querySelectorAll('section');
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
-        }
+if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        const isDark = document.body.classList.contains('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });
-}, { threshold: 0.2 });
+}
 
-sections.forEach(section => observer.observe(section));
+// Animação de entrada das sections (reveal)
+const revealEls = document.querySelectorAll('.reveal');
 
-// Activate background animation on load
-window.addEventListener('load', () => {
-    document.querySelectorAll('.circle').forEach(circle => {
-        circle.style.animationPlayState = 'running';
-    });
-});
+if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    revealEls.forEach(el => observer.observe(el));
+} else {
+    // Fallback
+    revealEls.forEach(el => el.classList.add('visible'));
+}

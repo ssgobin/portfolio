@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
@@ -18,16 +18,22 @@
         <div class="container header-inner">
             <div class="brand">
                 <span class="brand-name">João Vitor Sgobin</span>
-                <span class="brand-role">Desenvolvedor</span>
+                <span class="brand-role" data-i18n="brand_role">Desenvolvedor</span>
             </div>
 
             <nav class="nav">
-                <a href="#hero">Início</a>
-                <a href="#about">Sobre</a>
-                <a href="#skills">Habilidades</a>
-                <a href="#projects">Projetos</a>
-                <a href="#contact">Contato</a>
+                <a href="#hero" data-i18n="nav_home">Início</a>
+                <a href="#about" data-i18n="nav_about">Sobre</a>
+                <a href="#skills" data-i18n="nav_skills">Habilidades</a>
+                <a href="#projects" data-i18n="nav_projects">Projetos</a>
+                <a href="#contact" data-i18n="nav_contact">Contato</a>
             </nav>
+
+            <select id="lang-switch" class="lang-switch">
+                <option value="pt">🇧🇷 PT</option>
+                <option value="en">🇺🇸 EN</option>
+                <option value="es">🇪🇸 ES</option>
+            </select>
 
             <button class="theme-toggle" aria-label="Alternar tema">
                 <span class="icon-sun">☀️</span>
@@ -40,19 +46,20 @@
         <!-- HERO -->
         <section id="hero" class="hero container reveal">
             <div class="hero-left">
-                <p class="hero-kicker">Desenvolvedor Full Stack</p>
+                <p class="hero-kicker" data-i18n="hero_kicker">Desenvolvedor Full Stack</p>
+
                 <h1 class="hero-title">
-                    Construindo soluções<br>
-                    <span>simples, modernas e eficientes.</span>
+                    <span data-i18n="hero_title_1">Construindo soluções</span><br>
+                    <span data-i18n="hero_title_2">simples, modernas e eficientes.</span>
                 </h1>
-                <p class="hero-subtitle">
-                    Trabalho com desenvolvimento web, APIs, integrações e automação,
-                    sempre focado em entregar valor real para pessoas e negócios.
+
+                <p class="hero-subtitle" data-i18n="hero_subtitle">
+                    Trabalho com desenvolvimento web, APIs, integrações e automação...
                 </p>
 
                 <div class="hero-actions">
-                    <a href="#projects" class="btn-primary">Ver projetos</a>
-                    <a href="#contact" class="btn-ghost">Entrar em contato</a>
+                    <a href="#projects" class="btn-primary" data-i18n="btn_projects">Ver projetos</a>
+                    <a href="#contact" class="btn-ghost" data-i18n="btn_contact">Entrar em contato</a>
                 </div>
             </div>
 
@@ -66,84 +73,79 @@
 
         <!-- SOBRE -->
         <section id="about" class="section container reveal">
-            <h2 class="section-title">Sobre mim</h2>
-            <p class="section-text">
+            <h2 class="section-title" data-i18n="about_title">Sobre mim</h2>
+            <p class="section-text" data-i18n="about_text">
                 Desenvolvedor Full Stack com experiência em criação de sistemas web, automações e soluções IoT.
                 Trabalho com JavaScript, Java/Spring Boot, Firebase, Python e infraestrutura integrada.
                 Meu foco é entregar produtos robustos, bem arquitetados e com excelente experiência para o usuário.
             </p>
         </section>
 
-
         <!-- HABILIDADES -->
         <section id="skills" class="section container reveal">
-            <h2 class="section-title">Habilidades</h2>
+            <h2 class="section-title" data-i18n="skills_title">Habilidades</h2>
             <div class="grid">
                 <article class="card">
-                    <h3>Front-end</h3>
-                    <p>HTML, CSS, JavaScript, React e interfaces responsivas focadas em UX.</p>
+                    <h3 data-i18n="skill_frontend_title">Front-end</h3>
+                    <p data-i18n="skill_frontend_desc">HTML, CSS, JavaScript, React e interfaces responsivas focadas em UX.</p>
                 </article>
 
                 <article class="card">
-                    <h3>Back-end</h3>
-                    <p>Java com Spring Boot, PHP e APIs REST bem estruturadas.</p>
+                    <h3 data-i18n="skill_backend_title">Back-end</h3>
+                    <p data-i18n="skill_backend_desc">Java com Spring Boot, PHP e APIs REST bem estruturadas.</p>
                 </article>
 
                 <article class="card">
-                    <h3>Banco & Cloud</h3>
-                    <p>Firebase, Firestore, autenticação, storage e integrações em nuvem.</p>
+                    <h3 data-i18n="skill_cloud_title">Banco & Cloud</h3>
+                    <p data-i18n="skill_cloud_desc">Firebase, Firestore, autenticação, storage e integrações em nuvem.</p>
                 </article>
 
                 <article class="card">
-                    <h3>Automação & IoT</h3>
-                    <p>Projetos com ESP32/ESP8266, sensores, bots e integração com APIs.</p>
+                    <h3 data-i18n="skill_iot_title">Automação & IoT</h3>
+                    <p data-i18n="skill_iot_desc">Projetos com ESP32/ESP8266, sensores, bots e integração com APIs.</p>
                 </article>
 
                 <article class="card">
-                    <h3>Análise de Dados</h3>
-                    <p>Python, Pandas e manipulação de dados para insights rápidos.</p>
+                    <h3 data-i18n="skill_data_title">Análise de Dados</h3>
+                    <p data-i18n="skill_data_desc">Python, Pandas e manipulação de dados para insights rápidos.</p>
                 </article>
 
                 <article class="card">
-                    <h3>Colaboração</h3>
-                    <p>Git, GitHub, organização de projetos e comunicação com time/cliente.</p>
+                    <h3 data-i18n="skill_collab_title">Colaboração</h3>
+                    <p data-i18n="skill_collab_desc">Git, GitHub, organização de projetos e comunicação com time/cliente.</p>
                 </article>
             </div>
         </section>
 
         <!-- PROJETOS -->
         <section id="projects" class="section container reveal">
-            <h2 class="section-title">Projetos em destaque</h2>
+            <h2 class="section-title" data-i18n="projects_title">Projetos em destaque</h2>
             <div class="grid projects-grid">
                 <article class="card project-card">
                     <h3>ValCounter</h3>
-                    <p>Bot para Twitch com overlay para Valorant, focado em estatísticas de partidas e interação em
-                        tempo real.</p>
-                    <a href="https://github.com/ssgobin" target="_blank" class="btn-link">Ver no GitHub →</a>
+                    <p data-i18n="proj_valcounter_desc">Bot para Twitch com overlay para Valorant...</p>
+                    <a href="https://github.com/ssgobin" target="_blank" class="btn-link" data-i18n="btn_github">Ver no GitHub →</a>
                 </article>
 
                 <article class="card project-card">
                     <h3>ACIANexus</h3>
-                    <p>Plataforma completa desenvolvida para a ACIA, integrando dashboards, cadastros, automações e
-                        gestão interna.</p>
-                    <a href="https://github.com/ssgobin" target="_blank" class="btn-link">Ver no GitHub →</a>
+                    <p data-i18n="proj_acianexus_desc">Plataforma completa desenvolvida para a ACIA...</p>
+                    <a href="https://github.com/ssgobin" target="_blank" class="btn-link" data-i18n="btn_github">Ver no GitHub →</a>
                 </article>
-
 
                 <article class="card project-card">
                     <h3>Varal Automático</h3>
-                    <p>Projeto IoT com controle via Telegram, sensores e automação para o dia a dia.</p>
-                    <a href="https://github.com/ssgobin" target="_blank" class="btn-link">Ver no GitHub →</a>
+                    <p data-i18n="proj_varal_desc">Projeto IoT com controle via Telegram...</p>
+                    <a href="https://github.com/ssgobin" target="_blank" class="btn-link" data-i18n="btn_github">Ver no GitHub →</a>
                 </article>
             </div>
         </section>
 
         <!-- CONTATO -->
         <section id="contact" class="section container reveal">
-            <h2 class="section-title">Contato</h2>
-            <p class="section-text">
-                Aberto para oportunidades, parcerias e novos projetos.
-            </p>
+            <h2 class="section-title" data-i18n="contact_title">Contato</h2>
+            <p class="section-text" data-i18n="contact_text">Aberto para oportunidades, parcerias e novos projetos.</p>
+
             <a href="mailto:ssgobin.dev@gmail.com" class="contact-email">ssgobin.dev@gmail.com</a>
 
             <div class="contact-links">
@@ -157,7 +159,7 @@
     <footer class="footer">
         <div class="container footer-inner">
             <p>© 2025 João Vitor Sgobin.</p>
-            <p class="footer-note">Desenvolvido com atenção aos detalhes.</p>
+            <p class="footer-note" data-i18n="footer_note">Desenvolvido com atenção aos detalhes.</p>
         </div>
     </footer>
 
